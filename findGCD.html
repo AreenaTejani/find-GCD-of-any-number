@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FindGCD</title>
+</head>
+<body>
+<H1>TO FIND THE GCD</H1>	
+<label>ENTER FIRST VALUE:</label>
+<input type="text" id="one">
+<label>ENTER SECOND VALUE:</label>
+<input type="text" id="two">
+<button onclick="fungcd()">SHOW GCD</button>
+<p id="output"></p>
+
+<script type="text/javascript">
+	function fungcd(){
+  var one = Math.abs( document.getElementById('one').value);
+  var two = Math.abs( document.getElementById('two').value);
+  var limit=Math.max(one,two);
+  var GCD;
+
+	for(i=1;i<=limit;i++){
+		if(one%i==0  && two%i==0){
+			GCD=i;
+         }
+		}
+
+
+document.getElementById("output").innerHTML=GCD;
+
+
+}
+
+</script>
+</body>
+</html>
